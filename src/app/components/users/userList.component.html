@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="input-group">
+    <input type="text"
+           class="form-control"
+           placeholder="Search all users..."
+           ng-model="vm.searchVal"
+           ng-model-options="{debounce: {'default': 350, 'blur': 0}}"
+           ng-change="vm.search(vm.searchVal)">
+  </div>
+
+  <table class="table table-striped users">
+    <tr ng-repeat="user in vm.users">
+      <td>
+        <div layout="row">
+          <img ng-src="{{user.avatar_url}}"/>
+          {{user.login}}
+        </div>
+      </td>
+      <td>
+        <a class="btn btn-default" ng-link="['UserDetail', {username: user.login}]">See Details</a>
+      </td>
+    </tr>
+  </table>
+</div>
