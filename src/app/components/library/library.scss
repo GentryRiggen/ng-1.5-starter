@@ -1,12 +1,18 @@
-table.users {
+table.books {
   img {
     width: 35px;
     height: 35px;
     border-radius: 50%;
   }
+
+  td {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
-.user-detail {
+.book-detail {
   img {
     float: left;
     width: 200px;

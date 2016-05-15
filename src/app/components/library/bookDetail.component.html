@@ -1,0 +1,25 @@
+<div ng-if="!vm.book">Loading...</div>
+<div ng-if="vm.book" class="container book-detail">
+  <div class="jumbotron">
+    <img ng-src="{{vm.book.artworkUrl}}"/>
+
+    <div class="details">
+      <h2>{{vm.book.title}}</h2>
+      <p>{{vm.book.authorFirstName}} {{vm.book.authorLastName}}</p>
+      <p>Published: {{vm.book.publishDate | date}}</p>
+      <p>Gentry Read it: {{vm.book.dateRead | date}}</p>
+      <span ng-repeat="star in vm.ratedStars track by $index"
+        class="glyphicon glyphicon-star">
+      </span>
+      <span ng-repeat="star in vm.emptyStars track by $index"
+            class="glyphicon glyphicon-star-empty">
+      </span>
+    </div>
+  </div>
+
+  <a class="btn btn-default" ng-link="['Books']">
+    <span class="glyphicon glyphicon-chevron-left"></span> All Books
+  </a>
+
+  <ng-outlet></ng-outlet>
+</div>

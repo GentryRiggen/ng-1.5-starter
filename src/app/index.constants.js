@@ -5,5 +5,5 @@
   angular
     .module('ng15Starter')
     .constant('moment', moment)
-    .constant('API_URL', 'https://api.github.com');
+    .constant('API_URL', 'http://gentryriggen.com/api');
 })();

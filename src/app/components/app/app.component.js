@@ -6,18 +6,18 @@
       templateUrl: 'app/components/app/app.component.html',
       $routeConfig: [
         {
-          path: '/users',
-          component: 'userList',
-          name: 'Users'
+          path: '/books',
+          component: 'bookList',
+          name: 'Books'
         },
         {
-          path: '/users/:username',
-          component: 'userDetail',
-          name: 'UserDetail'
+          path: '/books/:id',
+          component: 'bookDetail',
+          name: 'BookDetail'
         },
         {
           path: '/**',
-          redirectTo: ['Users']
+          redirectTo: ['Books']
         }
       ]
     });
